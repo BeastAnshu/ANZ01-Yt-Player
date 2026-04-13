@@ -1,0 +1,6 @@
+{
+  "Name": "Click always Yes",
+  "ProjectType": "Process",
+  "Description": "Click yes in anty gravity",
+  "MainFile": "Main.xaml"
+}
