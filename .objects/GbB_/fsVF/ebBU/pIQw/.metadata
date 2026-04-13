@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Bairan",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "pIQwhXwwAUijBlXs1T5zwg",
+  "Reference": "2qYIOA5oM0iwjmPfnS9vdA/pIQwhXwwAUijBlXs1T5zwg",
+  "ParentRef": "2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q",
+  "Created": "2026-04-13T17:48:28.0540055Z",
+  "Updated": "2026-04-13T17:48:28.0540055Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

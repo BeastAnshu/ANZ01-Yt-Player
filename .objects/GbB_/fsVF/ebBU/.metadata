@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome YouTube Music",
+  "Type": "Screen",
+  "Id": "ebBU1uiDL0erO5ZPCVDZ4Q",
+  "Reference": "2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q",
+  "ParentRef": "2qYIOA5oM0iwjmPfnS9vdA/fsVFLcBFT0Gg_tCCiDe4pw",
+  "Created": "2026-04-13T17:42:12.8713731Z",
+  "Updated": "2026-04-13T17:42:12.8713731Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

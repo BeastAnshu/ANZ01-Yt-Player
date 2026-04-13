@@ -1,6 +1,6 @@
 {
-  "Name": "Click always Yes",
+  "Name": "ANZ01 Yt Player",
   "ProjectType": "Process",
-  "Description": "Click yes in anty gravity",
+  "Description": "Play any music this automation will play that song.",
   "MainFile": "Main.xaml"
 }

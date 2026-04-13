@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome YouTube Music",
+  "Type": "App",
+  "Id": "GbB_v3jSc0ahet6CBxo6Rg",
+  "Reference": "2qYIOA5oM0iwjmPfnS9vdA/GbB_v3jSc0ahet6CBxo6Rg",
+  "Created": "2026-04-13T17:42:12.7288983Z",
+  "Updated": "2026-04-13T17:42:12.7288983Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

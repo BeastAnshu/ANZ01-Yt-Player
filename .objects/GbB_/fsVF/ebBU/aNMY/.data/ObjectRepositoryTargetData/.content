@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MONrvErzgUyItHmYbDWPuQ" Reference="2qYIOA5oM0iwjmPfnS9vdA/aNMYyFevokKuP8V-aug14A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="music.youtube.com" CVScreenId="4887680c-b82d-4de0-bc01-ba7b094f3a18" DesignTimeRectangle="312, 159, 426, 40" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="d54cad0c-9a05-42e1-ab00-8cae830827d3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="394ad094d8fd3bdc69ad95ee4690c3fe.jpg" xmlns="">03vetMv1yUk6C_JQG9FjpVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

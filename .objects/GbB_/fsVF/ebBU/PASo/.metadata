@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Search bairan bairan ro…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "PASoG7sxj0e9KNWyPhGqRw",
+  "Reference": "2qYIOA5oM0iwjmPfnS9vdA/PASoG7sxj0e9KNWyPhGqRw",
+  "ParentRef": "2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q",
+  "Created": "2026-04-13T17:44:35.1791784Z",
+  "Updated": "2026-04-13T17:44:35.1791784Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

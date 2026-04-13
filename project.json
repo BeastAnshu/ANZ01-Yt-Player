@@ -1,7 +1,7 @@
 {
-  "name": "Click always Yes",
+  "name": "ANZ01 Yt Player",
   "projectId": "a782c265-7b74-4618-9576-48b2e85de404",
-  "description": "Click yes in anty gravity",
+  "description": "Play any music this automation will play that song.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[25.10.3]",

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="Cp-g_rZ1c0mq4V2ARdkqoA" Reference="2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="hLewfLisH0esHTdOsEAu2Q" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVFhHzZc/a1VBEMUHDRbCw+IVms5OIRCLIfJAJJXaaGGsrOMHSBFSJZW1hY3vCzxIZSekCFZiIVhICkHS2VlYhCBCIp7wc++Sl7n74k2ibAYOXObPmdm9s7P3mnUUmfdlvijzkcy3ZL4rczXgGR02fPox/tQi81mZr8t8byzh34AvMbORr7PIvCfzocx/FxJ0BbFw9CL/sSLzGZlvFwhPC7hmYp6iyHwg850CyVkB5yDmOyLNyrsln7otXb2XwHO0lwF3eSead378tk8/kNaG0sfP0v4vaW8/gWd02PCJcUdBjnZPNM0SnRMuzkmrr6QfP6XXb6XHy2nl2c4zOmz44EtM5DnEMCbnqJW7vXdX2vwgffoi3Xratkfggy8xxEZ7ArkOj2hzZqNTWgVEb95Jl++07ZOALzHETt6J9ZycCVceMmwlqzlJ8gxiiIUj2hLI2acARmc0pmbifcZtR7/yUro0aMdEEAvH5MZcpADmdzSkjqapov76I/2R7a/Sw6W2PQIOuKI+YUQBXCLRkI4VnR31uYAsG++lm0/afhlwwBX1CVsUMH6rJTBYONvjRy0jFoDg+2IkXZlv+8OBvTysdikgKlMQAybqQamALN++S8+eSxdC58NVWoy5zkUB1V/B2ZvwxkLbL6NDE1Y/hicbRNfu//NBVHcUV7+MzsV13BRR74OkKaDuJxlS9aM0S9XP8ixVf0yyVP01G5dqP6dR/tfv+QE1J+CKqylRJAAAAABJRU5ErkJggg==" Reference="2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q" Selector="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" Url="https://music.youtube.com/" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="aa96b1ac9df1f695890a89067a848dca.jpg" xmlns="">0264BGUC3R0azyBkMu1mM0w</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

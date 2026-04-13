@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1fi_IEL5fUWPoBEHB72ITg" Reference="2qYIOA5oM0iwjmPfnS9vdA/pIQwhXwwAUijBlXs1T5zwg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="music.youtube.com/search" CVScreenId="6514736f-599f-4aaf-a3c1-1586fe432d63" CvTextArea="645, 502, 48, 17" CvTextArgument="Bairan" CvType="Text" DesignTimeRectangle="772, 626, 35, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' parentid='contents' tag='A' idx='2' /&gt;&quot;, strSongName)]" Guid="a735dd7a-0287-40f6-b837-88d3516a4a85" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="6c5f03eb4442f65eaff86b493d4dd806.jpg" xmlns="">0TYHDkQ106kmyw5eexmDQDQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="" Name="strSongName" />
+    </scg:List>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
