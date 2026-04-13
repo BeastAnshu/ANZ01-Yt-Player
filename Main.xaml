@@ -49,6 +49,8 @@
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,89 +108,119 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1278,1107" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1278,903" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Hello Lets Play music&quot;]" />
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="452,167" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome YouTube Music" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="452,742" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="6bc0db92-8084-424f-851c-4143a5a86f0f" Version="V2" WindowResize="Maximize">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,548" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into Song Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Text="[strSongName]" Version="V5">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="music.youtube.com" CVScreenId="4887680c-b82d-4de0-bc01-ba7b094f3a18" ContentHash="MONrvErzgUyItHmYbDWPuQ" DesignTimeRectangle="312, 159, 426, 40" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="d54cad0c-9a05-42e1-ab00-8cae830827d3" InformativeScreenshot="394ad094d8fd3bdc69ad95ee4690c3fe.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/aNMYyFevokKuP8V-aug14A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
-              </uix:NTypeInto.Target>
-              <uix:NTypeInto.VerifyOptions>
-                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionTypeIntoOptions.Retry>
-                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                </uix:VerifyExecutionTypeIntoOptions>
-              </uix:NTypeInto.VerifyOptions>
+    <Sequence DisplayName="Sequence to play music" sap:VirtualizedContainerService.HintSize="450,880" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log Message start play" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Hello Lets Play &quot;+strSongName]" />
+      <ui:LogMessage DisplayName="Log Message Closing Chrome" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Closing Chrome&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process Chrome" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
+      <ui:LogMessage DisplayName="Log Message Closed Chrome" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Closec Chrome Successfully&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Play YouTube Music" HealingAgentBehavior="[UiPath.UIAutomationNext.Enums.NHealingAgentBehavior.Disabled]" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="6bc0db92-8084-424f-851c-4143a5a86f0f" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,548" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </uix:NTypeInto>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Search bairan bairan ro…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
-              <uix:NKeyboardShortcuts.Target>
-                <uix:TargetAnchorable BrowserURL="music.youtube.com" CVScreenId="ce9f5a42-ac7f-474c-8bb9-b53622f82aaa" ContentHash="68appsYnRUyaqL_jNDQ3SA" CvElementArea="257, 156, 483, 45" CvType="InputBox" DesignTimeRectangle="259, 147, 1478, 64" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='center-content style-scope ytmusic-nav-bar' parentid='layout' tag='DIV' aaname='                  ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4967a963-f09f-42dc-a0ac-348b1dfc257e" InformativeScreenshot="a360bebd4e66376d24e5514bc1390e0d.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/PASoG7sxj0e9KNWyPhGqRw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="ce9f5a42-ac7f-474c-8bb9-b53622f82aaa" DesignTimeRectangle="312, 159, 426, 40" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="e5865b5c-d767-4bd3-8139-0de360cf421b" SearchSteps="Selector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NKeyboardShortcuts.Target>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uix:NKeyboardShortcuts>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Bairan'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Timeout="5" Version="V5">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="music.youtube.com/search" CVScreenId="6514736f-599f-4aaf-a3c1-1586fe432d63" ContentHash="1fi_IEL5fUWPoBEHB72ITg" CvTextArea="645, 502, 48, 17" CvTextArgument="Bairan" CvType="Text" DesignTimeRectangle="772, 626, 35, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' parentid='contents' tag='A' idx='2' /&gt;&quot;, strSongName)]" Guid="a735dd7a-0287-40f6-b837-88d3516a4a85" InformativeScreenshot="6c5f03eb4442f65eaff86b493d4dd806.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/pIQwhXwwAUijBlXs1T5zwg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
-              </uix:NClick.Target>
-            </uix:NClick>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.OCREngine>
-        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-          <ActivityFunc.Argument>
-            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-          </ActivityFunc.Argument>
-        </ActivityFunc>
-      </uix:NApplicationCard.OCREngine>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="Cp-g_rZ1c0mq4V2ARdkqoA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVFhHzZc/a1VBEMUHDRbCw+IVms5OIRCLIfJAJJXaaGGsrOMHSBFSJZW1hY3vCzxIZSekCFZiIVhICkHS2VlYhCBCIp7wc++Sl7n74k2ibAYOXObPmdm9s7P3mnUUmfdlvijzkcy3ZL4rczXgGR02fPox/tQi81mZr8t8byzh34AvMbORr7PIvCfzocx/FxJ0BbFw9CL/sSLzGZlvFwhPC7hmYp6iyHwg850CyVkB5yDmOyLNyrsln7otXb2XwHO0lwF3eSead378tk8/kNaG0sfP0v4vaW8/gWd02PCJcUdBjnZPNM0SnRMuzkmrr6QfP6XXb6XHy2nl2c4zOmz44EtM5DnEMCbnqJW7vXdX2vwgffoi3Xratkfggy8xxEZ7ArkOj2hzZqNTWgVEb95Jl++07ZOALzHETt6J9ZycCVceMmwlqzlJ8gxiiIUj2hLI2acARmc0pmbifcZtR7/yUro0aMdEEAvH5MZcpADmdzSkjqapov76I/2R7a/Sw6W2PQIOuKI+YUQBXCLRkI4VnR31uYAsG++lm0/afhlwwBX1CVsUMH6rJTBYONvjRy0jFoDg+2IkXZlv+8OBvTysdikgKlMQAybqQamALN++S8+eSxdC58NVWoy5zkUB1V/B2ZvwxkLbL6NDE1Y/hicbRNfu//NBVHcUV7+MzsV13BRR74OkKaDuJxlS9aM0S9XP8ixVf0yyVP01G5dqP6dR/tfv+QE1J+CKqylRJAAAAABJRU5ErkJggg==" InformativeScreenshot="aa96b1ac9df1f695890a89067a848dca.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q" Selector="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" Url="https://music.youtube.com/" Version="V2">
-          <uix:TargetApp.Arguments>
-            <InArgument x:TypeArguments="x:String" />
-          </uix:TargetApp.Arguments>
-          <uix:TargetApp.WorkingDirectory>
-            <InArgument x:TypeArguments="x:String" />
-          </uix:TargetApp.WorkingDirectory>
-        </uix:TargetApp>
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into Song Name" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Text="[strSongName]" Version="V5">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="music.youtube.com" CVScreenId="4887680c-b82d-4de0-bc01-ba7b094f3a18" ContentHash="MONrvErzgUyItHmYbDWPuQ" DesignTimeRectangle="312, 159, 426, 40" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="d54cad0c-9a05-42e1-ab00-8cae830827d3" InformativeScreenshot="394ad094d8fd3bdc69ad95ee4690c3fe.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/aNMYyFevokKuP8V-aug14A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                </uix:NTypeInto.Target>
+                <uix:NTypeInto.VerifyOptions>
+                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                      <InArgument x:TypeArguments="x:Boolean" />
+                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                      <InArgument x:TypeArguments="x:Double" />
+                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                  </uix:VerifyExecutionTypeIntoOptions>
+                </uix:NTypeInto.VerifyOptions>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Search bairan bairan ro…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InteractionMode="HardwareEvents" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Shortcuts="[d(hk)][k(Enter)][u(hk)]" Version="V5">
+                <uix:NKeyboardShortcuts.Target>
+                  <uix:TargetAnchorable BrowserURL="music.youtube.com" CVScreenId="ce9f5a42-ac7f-474c-8bb9-b53622f82aaa" ContentHash="68appsYnRUyaqL_jNDQ3SA" CvElementArea="257, 156, 483, 45" CvType="InputBox" DesignTimeRectangle="259, 147, 1478, 64" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' class='center-content style-scope ytmusic-nav-bar' parentid='layout' tag='DIV' aaname='                  ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4967a963-f09f-42dc-a0ac-348b1dfc257e" InformativeScreenshot="a360bebd4e66376d24e5514bc1390e0d.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/PASoG7sxj0e9KNWyPhGqRw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="ce9f5a42-ac7f-474c-8bb9-b53622f82aaa" DesignTimeRectangle="312, 159, 426, 40" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="e5865b5c-d767-4bd3-8139-0de360cf421b" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NKeyboardShortcuts.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NKeyboardShortcuts>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Bairan'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6bc0db92-8084-424f-851c-4143a5a86f0f" Timeout="5" Version="V5">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="music.youtube.com/search" CVScreenId="6514736f-599f-4aaf-a3c1-1586fe432d63" ContentHash="1fi_IEL5fUWPoBEHB72ITg" CvTextArea="645, 502, 48, 17" CvTextArgument="Bairan" CvType="Text" DesignTimeRectangle="772, 626, 35, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' parentid='contents' tag='A' idx='2' /&gt;&quot;, strSongName)]" Guid="a735dd7a-0287-40f6-b837-88d3516a4a85" InformativeScreenshot="6c5f03eb4442f65eaff86b493d4dd806.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/pIQwhXwwAUijBlXs1T5zwg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="None" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" ContentHash="Cp-g_rZ1c0mq4V2ARdkqoA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAInSURBVFhHzZc/a1VBEMUHDRbCw+IVms5OIRCLIfJAJJXaaGGsrOMHSBFSJZW1hY3vCzxIZSekCFZiIVhICkHS2VlYhCBCIp7wc++Sl7n74k2ibAYOXObPmdm9s7P3mnUUmfdlvijzkcy3ZL4rczXgGR02fPox/tQi81mZr8t8byzh34AvMbORr7PIvCfzocx/FxJ0BbFw9CL/sSLzGZlvFwhPC7hmYp6iyHwg850CyVkB5yDmOyLNyrsln7otXb2XwHO0lwF3eSead378tk8/kNaG0sfP0v4vaW8/gWd02PCJcUdBjnZPNM0SnRMuzkmrr6QfP6XXb6XHy2nl2c4zOmz44EtM5DnEMCbnqJW7vXdX2vwgffoi3Xratkfggy8xxEZ7ArkOj2hzZqNTWgVEb95Jl++07ZOALzHETt6J9ZycCVceMmwlqzlJ8gxiiIUj2hLI2acARmc0pmbifcZtR7/yUro0aMdEEAvH5MZcpADmdzSkjqapov76I/2R7a/Sw6W2PQIOuKI+YUQBXCLRkI4VnR31uYAsG++lm0/afhlwwBX1CVsUMH6rJTBYONvjRy0jFoDg+2IkXZlv+8OBvTysdikgKlMQAybqQamALN++S8+eSxdC58NVWoy5zkUB1V/B2ZvwxkLbL6NDE1Y/hicbRNfu//NBVHcUV7+MzsV13BRR74OkKaDuJxlS9aM0S9XP8ixVf0yyVP01G5dqP6dR/tfv+QE1J+CKqylRJAAAAABJRU5ErkJggg==" InformativeScreenshot="aa96b1ac9df1f695890a89067a848dca.jpg" Reference="2qYIOA5oM0iwjmPfnS9vdA/ebBU1uiDL0erO5ZPCVDZ4Q" Selector="&lt;html app='chrome.exe' title='YouTube Music' /&gt;" Url="https://music.youtube.com/" Version="V2">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+      <ui:LogMessage DisplayName="Log Message music played" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Successfully played &quot;+strSongName]" />
+    </Sequence>
   </Sequence>
 </Activity>
